@@ -1,0 +1,19 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src",
+    "declarationDir": "dist",
+    "resolveJsonModule": true,
+    "esModuleInterop": true
+  },
+  "include": ["src", "../typings/**/*.d.ts", "fixtures"],
+  "references": [
+    { "path": "../packages/woop-account" },
+    { "path": "../packages/woop-crypto" },
+    { "path": "../packages/woop-utils" },
+    { "path": "../packages/woop-network" },
+    { "path": "../packages/woop-transaction" },
+    { "path": "../packages/woop-contract" }
+  ]
+}

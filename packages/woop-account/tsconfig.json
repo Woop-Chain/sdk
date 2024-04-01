@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist"
+  },
+  "include": ["src", "../../typings/**/*.d.ts", "aaa.ts"],
+  "references": [
+    { "path": "../woop-crypto" },
+    { "path": "../woop-utils" },
+    { "path": "../woop-transaction" },
+    { "path": "../woop-staking" },
+    { "path": "../woop-network" }
+  ]
+}

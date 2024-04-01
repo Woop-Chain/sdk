@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.base.json",
+  "files": [],
+  "include": ["./typings/**/*.d.ts"],
+  "references": [
+    { "path": "packages/woop-utils" },
+    { "path": "packages/woop-crypto" },
+    { "path": "packages/woop-network" },
+    { "path": "packages/woop-transaction" },
+    { "path": "packages/woop-staking" },
+    { "path": "packages/woop-account" },
+    { "path": "packages/woop-contract" },
+    { "path": "packages/woop-core" }
+  ]
+}

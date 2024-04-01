@@ -1,0 +1,29 @@
+{
+  "name": "@woop-js/core",
+  "version": "0.1.58",
+  "description": "woop core package",
+  "main": "dist/index.js",
+  "node": "dist/index.js",
+  "browser": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "jsnext:main": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "dev@cipherlabs.org",
+  "license": "MIT",
+  "dependencies": {
+    "@woop-js/account": "0.1.58",
+    "@woop-js/contract": "0.1.58",
+    "@woop-js/crypto": "0.1.58",
+    "@woop-js/network": "0.1.58",
+    "@woop-js/staking": "0.1.58",
+    "@woop-js/transaction": "0.1.58",
+    "@woop-js/utils": "0.1.58"
+  }
+}
