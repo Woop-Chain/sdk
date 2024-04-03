@@ -20,7 +20,7 @@ const { ChainID, ChainType, hexToNumber } = require('@woop-js/utils');
 
 * const wallet = new Wallet(
 *   new Messenger(
-*     new HttpProvider('https://rpc.woop.ai'),
+*     new HttpProvider('https://trpc.woopchain.com'),
 *     ChainType.Woop,
 *     ChainID.WikiTestnet,
 *   ),
@@ -50,7 +50,7 @@ Loading a contract object using the contract json and contract address for inter
 ```javascript
 * const { Woop } = require("@woop-js/core");
 * const { ChainID, ChainType } = require("@woop-js/utils");
-* const wiki = new Woop("https://rpc.woop.ai", {
+* const wiki = new Woop("https://trpc.woopchain.com", {
 *   chainType: ChainType.Woop,
 *   chainId: ChainID.WikiTestnet,
 * });
@@ -70,7 +70,7 @@ const { Messenger, HttpProvider } = require('@woop-js/network');
 const { ChainID, ChainType, hexToNumber } = require('@woop-js/utils');
 
 * const wallet = new Wallet(new Messenger(
-*   new HttpProvider('https://rpc.woop.ai'),
+*   new HttpProvider('https://trpc.woopchain.com'),
 *   ChainType.Woop,
 *   ChainID.WikiTestnet,
 * ));
@@ -123,7 +123,7 @@ Subscribing to the contract events requires web socket based messenger.
 * const { Wallet } = require('@woop-js/account');
 * const { Messenger, WSProvider } = require('@woop-js/network');
 * const { ChainID, ChainType, hexToNumber } = require('@woop-js/utils');
-* const ws = new WSProvider('wss://ws.woop.ai');
+* const ws = new WSProvider('wss://tws.woopchain.com');
 
 * const wallet = new Wallet(
 *   new Messenger(
@@ -175,9 +175,9 @@ import {
 import { hexToBN, defineReadOnly } from '@woop-js/utils';
 
 /** @hidden */
-const NegativeWoop: BN = new BN(-1);
+const NegativeWoo: BN = new BN(-1);
 /** @hidden */
-const Woop: BN = new BN(1);
+const Woo: BN = new BN(1);
 /** @hidden */
 const Zero: BN = new BN(0);
 /** @hidden */
@@ -735,7 +735,7 @@ class CoderNumber extends Coder {
         if (v.gt(bounds)) {
           throw new Error('out-of-bounds');
         }
-        bounds = bounds.add(Woop).mul(NegativeWoop);
+        bounds = bounds.add(Woo).mul(NegativeWoo);
         if (v.lt(bounds)) {
           throw new Error('out-of-bounds');
         }

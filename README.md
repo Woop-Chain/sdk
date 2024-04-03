@@ -1,11 +1,11 @@
-# Woop JavaScript SDK
+# WoopChain JavaScript SDK
 
 [![npm version](https://img.shields.io/npm/v/@woop-js/core.svg?style=flat-square)](https://www.npmjs.com/package/@woop-js/core)
 [![Build Status](https://travis-ci.com/FireStack-Lab/Woop-sdk-core.svg?branch=master)](https://travis-ci.com/FireStack-Lab/Woop-sdk-core)
 
-This is the Woop Javascript SDK which provides an easier way to interact with Woop blockchain.
+This is the WoopChain Javascript SDK which provides an easier way to interact with WoopChain blockchain.
 
-Please read the [documentation](https://jsdoc.woop.ai/) for full API doc.
+Please read the [documentation](https://jsdoc.wikiwoop/) for full API doc.
 
 The SDK includes following packages with package-level documentation and examples inside each package.
 

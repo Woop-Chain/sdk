@@ -68,8 +68,8 @@ export class Woop extends utils.WoopCore {
    * const wiki = new Woop(
    *   // rpc url:
    *   // local: http://localhost:9500
-   *   // testnet: https://testnetrpc.woop.ai/
-   *   // mainnet: https://rpc.woop.ai/
+   *   // testnet: https://trpc.woopchain.com/
+   *   // mainnet: https:// rpc.woopchain.com/
    *   'http://localhost:9500',
    *   {
    *     // chainType set to Woop

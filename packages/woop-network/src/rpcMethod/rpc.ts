@@ -14,8 +14,8 @@ npm install @woop-js/network
 ```javascript
 const { Messenger, HttpProvider, WSProvider } = require('@woop-js/network');
 const { ChainID, ChainType } = require('@woop-js/utils');
-const testnetHTTP = 'https://rpc.woop.ai';
-const testnetWS = 'wss://ws.woop.ai';
+const testnetHTTP = 'https://trpc.woopchain.com';
+const testnetWS = 'wss://tws.woopchain.com';
 const localHTTP = 'http://localhost:9500/';
 const localWS = 'http://localhost:9800/';
 const http = new HttpProvider(testnetHTTP); // for local use localHTTP

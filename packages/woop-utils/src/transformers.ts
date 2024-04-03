@@ -14,7 +14,7 @@ export enum Units {
   szabo = 'szabo',
   finney = 'finney',
   ether = 'ether',
-  woop = 'woop',
+  woo = 'woo',
   Kether = 'Kether',
   Mether = 'Mether',
   Gether = 'Gether',
@@ -30,7 +30,7 @@ export const unitMap = new Map([
   [Units.szabo, '1000000000000'], // 1e12 wei
   [Units.finney, '1000000000000000'], // 1e15 wei
   [Units.ether, '1000000000000000000'], // 1e18 wei
-  [Units.woop, '1000000000000000000'], // 1e18 wei
+  [Units.woo, '1000000000000000000'], // 1e18 wei
   [Units.Kether, '1000000000000000000000'], // 1e21 wei
   [Units.Mether, '1000000000000000000000000'], // 1e24 wei
   [Units.Gether, '1000000000000000000000000000'], // 1e27 wei
@@ -133,7 +133,7 @@ export const hexToBN = (hex: string): BN => {
 };
 
 /**
- * Converts any WOOP value into wei
+ * Converts any WOO value into wei
  */
 export const toWei = (input: BN | string, unit: Units): BN => {
   try {
@@ -194,7 +194,7 @@ export const toWei = (input: BN | string, unit: Units): BN => {
 };
 
 /**
- * Converts any wei value into a WOOP value.
+ * Converts any wei value into a WOO value.
  */
 export const fromWei = (wei: BN | string, unit: Units, options: any = DEFAULT_OPTIONS): string => {
   try {
@@ -263,8 +263,8 @@ export class Unit {
   static Ether(str: BN | string) {
     return new Unit(str).asEther();
   }
-  static Woop(str: BN | string) {
-    return new Unit(str).asWoop();
+  static Woo(str: BN | string) {
+    return new Unit(str).asWoo();
   }
   static Kether(str: BN | string) {
     return new Unit(str).asKether();
@@ -324,8 +324,8 @@ export class Unit {
     this.wei = toWei(this.unit, Units.ether);
     return this;
   }
-  asWoop() {
-    this.wei = toWei(this.unit, Units.woop);
+  asWoo() {
+    this.wei = toWei(this.unit, Units.woo);
     return this;
   }
   asKether() {
@@ -395,9 +395,9 @@ export class Unit {
       throw new Error('error transforming');
     }
   }
-  toWoop() {
+  toWoo() {
     if (this.wei) {
-      return fromWei(this.wei, Units.woop);
+      return fromWei(this.wei, Units.woo);
     } else {
       throw new Error('error transforming');
     }

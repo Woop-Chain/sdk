@@ -1,6 +1,5 @@
-# Woop JS-SDK Documentation
+# WoopChain JS-SDK Documentation
 
-## [CLICK ME!!](https://woop-js-sdk-doc.s3-us-west-1.amazonaws.com/index.html) to see the documentation
 
 # metaDocumentation 
 ## Summary 

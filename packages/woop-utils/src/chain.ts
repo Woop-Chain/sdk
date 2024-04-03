@@ -22,7 +22,7 @@ const { Units } = require('@woop-js/utils');
 [Units.szabo, '1000000000000'], // 1e12 wei
 [Units.finney, '1000000000000000'], // 1e15 wei
 [Units.ether, '1000000000000000000'], // 1e18 wei
-[Units.woop, '1000000000000000000'], // 1e18 wei
+[Units.woo, '1000000000000000000'], // 1e18 wei
 [Units.Kether, '1000000000000000000000'], // 1e21 wei
 [Units.Mether, '1000000000000000000000000'], // 1e24 wei
 [Units.Gether, '1000000000000000000000000000'], // 1e27 wei
@@ -34,9 +34,9 @@ Converting between different units
 const { Units, Unit, numberToString, add0xToString, fromWei, toWei, numToStr} = require('@woop-js/utils');
 const { BN } = require('@woop-js/crypto');
 
-const woop = new Unit('1').asWoop();
-const woopToGwei = woop.toGwei();
-console.log(woopToGwei);
+const woo = new Unit('1').asWoo();
+const wooToGwei = woo.toGwei();
+console.log(wooToGwei);
 
 // numberToString
 const num = 123;
@@ -50,12 +50,12 @@ console.log(expected);
 
 // fromWei
 const Wei = new BN('1000000000000000000');
-const expected = fromWei(Wei, Units.woop);
+const expected = fromWei(Wei, Units.woo);
 console.log(expected);
 
 // toWei
-const woop = new BN('1');
-const expected = toWei(woop, wiki.utils.Units.woop);
+const woo = new BN('1');
+const expected = toWei(woo, wiki.utils.Units.woo);
 const num = numToStr(expected);
 console.log(num);
 ```

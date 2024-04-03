@@ -16,7 +16,7 @@ import { fromBech32, toBech32, HRP, tHRP } from './bech32';
  * const { WoopAddress } = require('@woop-js/crypto');
  *
  * // Step 2: call functions
- * const addr = 'woop103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7'
+ * const addr = 'woo103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7'
  * const res = WoopAddress.isValidBech32(addr);
  * console.log(res);
  * ```
@@ -25,7 +25,7 @@ export class WoopAddress {
   /**
    * @example
    * ```
-   * const addr = 'woop103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7'
+   * const addr = 'woo103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7'
    * const res = WoopAddress.isValidBech32(addr);
    * console.log(res);
    * ```
@@ -38,7 +38,7 @@ export class WoopAddress {
   /**
    * @example
    * ```
-   * const addr = 'woop103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7'
+   * const addr = 'woo103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7'
    * const res = WoopAddress.isValidChecksum(addr);
    * console.log(res);
    * ```
@@ -51,7 +51,7 @@ export class WoopAddress {
   /**
    * @example
    * ```
-   * const addr = 'woop103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7'
+   * const addr = 'woo103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7'
    * const res = WoopAddress.isValidBech32(addr);
    * console.log(res);
    * ```
@@ -64,7 +64,7 @@ export class WoopAddress {
   /**
    * @example
    * ```
-   * const addr = 'woop103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7'
+   * const addr = 'woo103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7'
    * const res = WoopAddress.isValidBech32TestNet(addr);
    * console.log(res);
    * ```
@@ -82,7 +82,7 @@ export class WoopAddress {
    *
    * @example
    * ```
-   * const addr = 'woop103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7'
+   * const addr = 'woo103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7'
    * const instance = new WoopAddress(addr);
    * console.log(instance.basicHex);
    * ```
@@ -94,7 +94,7 @@ export class WoopAddress {
   /**
    * @example
    * ```
-   * const addr = 'woop103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7'
+   * const addr = 'woo103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7'
    * const instance = new WoopAddress(addr);
    * console.log(instance.checksum);
    * ```
@@ -106,7 +106,7 @@ export class WoopAddress {
   /**
    * @example
    * ```
-   * const addr = 'woop103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7'
+   * const addr = 'woo103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7'
    * const instance = new WoopAddress(addr);
    * console.log(instance.bech32);
    * ```
@@ -118,7 +118,7 @@ export class WoopAddress {
   /**
    * @example
    * ```
-   * const addr = 'woop103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7'
+   * const addr = 'woo103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7'
    * const instance = new WoopAddress(addr);
    * console.log(instance.bech32TestNet);
    * ```
@@ -139,7 +139,7 @@ export class WoopAddress {
    *
    * @example
    * ```
-   * const addr = 'woop103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7'
+   * const addr = 'woo103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7'
    * const instance = new WoopAddress(addr);
    * const res = instance.getBasic(addr);
    * console.log(res)

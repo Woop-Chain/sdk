@@ -1,6 +1,6 @@
 # @woop-js/account
 
-This package provides a collection of apis to create accounts and wallets and sign using them. A wallet can hold multiple accounts and account is associated with a unique `woop` address. This package also provides facilies to manage account keys.
+This package provides a collection of apis to create accounts and wallets and sign using them. A wallet can hold multiple accounts and account is associated with a unique `woo` address. This package also provides facilies to manage account keys.
 
 ## Installation
 
@@ -10,7 +10,7 @@ npm install @woop-js/account
 
 ## Usage
 
-Creating new account and display hex and bech32 (woop) addresses 
+Creating new account and display hex and bech32 (woo) addresses 
 ```javascript
 const account = new Account(); // or const account = Account.new()
 console.log(account.checksumAddress);
@@ -27,7 +27,7 @@ Creating account using private key and custom messenger
 const account = new Account(
   '45e497bd45a9049bcb649016594489ac67b9f052a6cdf5cb74ee2427a60bf25e',
   new Messenger(
-    new HttpProvider('https://rpc.woop.ai'),
+    new HttpProvider('https://trpc.woopchain.com'),
     ChainType.Woop,
     ChainID.WikiTestnet,
   ),
@@ -39,7 +39,7 @@ Creating account and setting custom messenger
 // uses by default http://localhost:9500 as messenger
 const account = new Account();
 const customMessenger = new Messenger(
-    new HttpProvider('https://rpc.woop.ai'),
+    new HttpProvider('https://trpc.woopchain.com'),
     ChainType.Woop,
     ChainID.WikiTestnet,
   );
@@ -71,7 +71,7 @@ Get the account balance
 const account = new Account(
   '45e497bd45a9049bcb649016594489ac67b9f052a6cdf5cb74ee2427a60bf25e',
   new Messenger(
-    new HttpProvider('https://rpc.woop.ai'),
+    new HttpProvider('https://trpc.woopchain.com'),
     ChainType.Woop,
     ChainID.WikiTestnet,
   ),
@@ -87,7 +87,7 @@ Create a transaction and account, and sign it
 const account = new Account(
   '45e497bd45a9049bcb649016594489ac67b9f052a6cdf5cb74ee2427a60bf25e',
   new Messenger(
-    new HttpProvider('https://rpc.woop.ai'),
+    new HttpProvider('https://trpc.woopchain.com'),
     ChainType.Woop,
     ChainID.WikiTestnet,
   ),
@@ -97,8 +97,8 @@ const { Unit } = require('@woop-js/utils');
 const factory = new TransactionFactory();
 
 const txn = factory.newTx({
-  to: 'woop166axnkjmghkf3df7xfvd0hn4dft8kemrza4cd2',
-  value: new Unit(1).asWoop().toWei(),
+  to: 'woo166axnkjmghkf3df7xfvd0hn4dft8kemrza4cd2',
+  value: new Unit(1).asWoo().toWei(),
   // gas limit, you can use string
   gasLimit: '21000',
   // send token from shardID
@@ -116,7 +116,7 @@ account.signTransaction(txn).then((signedTxn) => {
 
 Similarily staking transactions can be created and signed using account.
 
-A wallet represents user wallet that can hold woop or more user accounts.
+A wallet represents user wallet that can hold woo or more user accounts.
 
 Creating an empty wallet
 ```javascript
@@ -128,7 +128,7 @@ Setting a messenger to be used to send wallet transactions
 ```javascript
 wallet.setMessenger(
   new Messenger(
-    new HttpProvider('https://rpc.woop.ai'),
+    new HttpProvider('https://trpc.woopchain.com'),
     ChainType.Woop,
     ChainID.WikiTestnet,
   ),
@@ -139,7 +139,7 @@ Create an empty wallet with messenger
 ```javascript
 const wallet = new Wallet(
   new Messenger(
-    new HttpProvider('https://rpc.woop.ai'),
+    new HttpProvider('https://trpc.woopchain.com'),
     ChainType.Woop,
     ChainID.WikiTestnet,
   ),
@@ -168,7 +168,7 @@ wallet.addByKeyStore(keystore, passphrase).then(account => {
 
 Creating a new account using passphrase
 ```javascript
-const passphrase = 'woop-chain';
+const passphrase = 'woopchain';
 wallet.createAccount(passphrase).then(account => {
     console.log(account.bech32Address);
 });
@@ -190,8 +190,8 @@ wallet.setSigner(signerAddr);
 Sign transaction using wallet, will sign the transaction using the wallet signer
 ```javascript
 const txn = factory.newTx({
-  to: 'woop166axnkjmghkf3df7xfvd0hn4dft8kemrza4cd2',
-  value: new Unit(1).asWoop().toWei(),
+  to: 'woo166axnkjmghkf3df7xfvd0hn4dft8kemrza4cd2',
+  value: new Unit(1).asWoo().toWei(),
   // gas limit, you can use string
   gasLimit: '21000',
   // send token from shardID

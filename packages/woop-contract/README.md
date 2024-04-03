@@ -1,6 +1,6 @@
 # @woop-js/contract
 
-This package provides a collection of apis to create, deploy, and interact with smart contracts. In Woop, smart contracts all fully EVM compatible and the formats and terminologies match 1-to-1 with EVM smart contracts.
+This package provides a collection of apis to create, deploy, and interact with smart contracts. In WoopChain, smart contracts all fully EVM compatible and the formats and terminologies match 1-to-1 with EVM smart contracts.
 
 ## Installation
 
@@ -19,7 +19,7 @@ const { ChainID, ChainType, hexToNumber } = require('@woop-js/utils');
 
 const wallet = new Wallet(
   new Messenger(
-    new HttpProvider('https://rpc.woop.ai'),
+    new HttpProvider('https://trpc.woopchain.com'),
     ChainType.Woop,
     ChainID.WikiTestnet,
   ),
@@ -49,7 +49,7 @@ Loading a contract object using the contract json and contract address for inter
 ```javascript
 const { Woop } = require("@woop-js/core");
 const { ChainID, ChainType } = require("@woop-js/utils");
-const wiki = new Woop("https://rpc.woop.ai", {
+const wiki = new Woop("https://trpc.woopchain.com", {
   chainType: ChainType.Woop,
   chainId: ChainID.WikiTestnet,
 });
@@ -69,7 +69,7 @@ const { Messenger, HttpProvider } = require('@woop-js/network');
 const { ChainID, ChainType, hexToNumber } = require('@woop-js/utils');
 
 const wallet = new Wallet(new Messenger(
-  new HttpProvider('https://rpc.woop.ai'),
+  new HttpProvider('https://trpc.woopchain.com'),
   ChainType.Woop,
   ChainID.WikiTestnet,
 ));
@@ -122,7 +122,7 @@ const { ContractFactory } = require('@woop-js/contract');
 const { Wallet } = require('@woop-js/account');
 const { Messenger, WSProvider } = require('@woop-js/network');
 const { ChainID, ChainType, hexToNumber } = require('@woop-js/utils');
-const ws = new WSProvider('wss://ws.woop.ai');
+const ws = new WSProvider('wss://tws.woopchain.com');
 
 const wallet = new Wallet(
   new Messenger(

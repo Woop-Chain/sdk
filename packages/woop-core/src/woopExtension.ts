@@ -23,7 +23,7 @@ import { WoopConfig } from './util';
 /** @hidden */
 export enum ExtensionType {
   MathWallet = 'MathWallet',
-  WoopWallet = 'WoopWallet',
+  WooWallet = 'WooWallet',
 }
 
 /** @hidden */
@@ -51,7 +51,7 @@ export interface ExtensionInterface {
   messenger?: Messenger;
   version: string;
   isMathWallet?: boolean;
-  isWoopWallet?: boolean;
+  isWooWallet?: boolean;
   network: ExtensionNetwork;
 }
 
@@ -80,7 +80,7 @@ export class WoopExtension {
   /**
    * Create an blockchain instance support wallet injection
    *
-   * @param wallet could be MathWallet or WoopWallet instance
+   * @param wallet could be MathWallet or WooWallet instance
    * @param config (optional), using default `Chain_Id` and `Chain_Type`
    *
    * @example
@@ -89,9 +89,9 @@ export class WoopExtension {
    * export const initEx = async() => {
    *   wikiEx = new WoopExtension(window.woop);
    * }
-   * // Using WoopWallet instance
+   * // Using WooWallet instance
    * export const initEx = async() => {
-   *   wikiEx = new WoopExtension(window.woopwallet);
+   *   wikiEx = new WoopExtension(window.woowallet);
    * }
    * ```
    */
@@ -104,7 +104,7 @@ export class WoopExtension {
   ) {
     this.extensionType = null;
     this.wallet = wallet;
-    // check if it is mathwallet or woopwallet
+    // check if it is mathwallet or woowallet
     this.isExtension(this.wallet);
 
     if (wallet.messenger) {
@@ -155,12 +155,12 @@ export class WoopExtension {
   public isExtension(wallet: ExtensionInterface) {
     let isExtension = false;
     this.extensionType = null;
-    if (wallet.isMathWallet || wallet.isWoopWallet) {
+    if (wallet.isMathWallet || wallet.isWooWallet) {
       isExtension = true;
       if (wallet.isMathWallet) this.extensionType = ExtensionType.MathWallet;
-      else this.extensionType = ExtensionType.WoopWallet;
+      else this.extensionType = ExtensionType.WooWallet;
 
-      // remake signTransaction of MathWallet or WoopWallet
+      // remake signTransaction of MathWallet or WooWallet
       const { signTransaction } = this.wallet;
       this.wallet.signTransaction = async (
         transaction: Transaction,
