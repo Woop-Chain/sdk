@@ -42,7 +42,7 @@ export class TransactionFactory {
    * @example
    * ```javascript
    * const txn = wiki.transactions.newTx({
-   *   to: 'woo166axnkjmghkf3df7xfvd0hn4dft8kemrza4cd2',
+   *   to: 'woc166axnkjmghkf3df7xfvd0hn4dft8kemrza4cd2',
    *   value: '10000',
    *   gasLimit: '210000',
    *   shardID: 0,

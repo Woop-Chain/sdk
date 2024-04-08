@@ -128,8 +128,8 @@ export const bech32Decode = (bechString: string) => {
 };
 
 // HRP is the human-readable part of Woop bech32 addresses
-export const HRP = 'woo';
-export const tHRP = 'twoo';
+export const HRP = 'woc';
+export const tHRP = 'twoc';
 
 /**
  * convertBits
@@ -138,7 +138,7 @@ export const tHRP = 'twoo';
  *
  * For example, converts byte buffers to buffers of maximum 5 bit numbers,
  * padding those numbers as necessary. Necessary for encoding Ethereum-style
- * addresses as bech32 woos.
+ * addresses as bech32 wocs.
  *
  * @param {Buffer} data
  * @param {number} fromWidth
@@ -187,7 +187,7 @@ export const convertBits = (
  * bech32Encodes a canonical 20-byte Ethereum-style address as a bech32 Woop
  * address.
  *
- * The expected format is woo1<address><checksum> where address and checksum
+ * The expected format is woc1<address><checksum> where address and checksum
  * are the result of bech32 encoding a Buffer containing the address bytes.
  *
  * @param {string} 20 byte canonical address

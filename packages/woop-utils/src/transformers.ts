@@ -14,7 +14,7 @@ export enum Units {
   szabo = 'szabo',
   finney = 'finney',
   ether = 'ether',
-  woo = 'woo',
+  woc = 'woc',
   Kether = 'Kether',
   Mether = 'Mether',
   Gether = 'Gether',
@@ -30,7 +30,7 @@ export const unitMap = new Map([
   [Units.szabo, '1000000000000'], // 1e12 wei
   [Units.finney, '1000000000000000'], // 1e15 wei
   [Units.ether, '1000000000000000000'], // 1e18 wei
-  [Units.woo, '1000000000000000000'], // 1e18 wei
+  [Units.woc, '1000000000000000000'], // 1e18 wei
   [Units.Kether, '1000000000000000000000'], // 1e21 wei
   [Units.Mether, '1000000000000000000000000'], // 1e24 wei
   [Units.Gether, '1000000000000000000000000000'], // 1e27 wei
@@ -133,7 +133,7 @@ export const hexToBN = (hex: string): BN => {
 };
 
 /**
- * Converts any WOO value into wei
+ * Converts any WOC value into wei
  */
 export const toWei = (input: BN | string, unit: Units): BN => {
   try {
@@ -194,7 +194,7 @@ export const toWei = (input: BN | string, unit: Units): BN => {
 };
 
 /**
- * Converts any wei value into a WOO value.
+ * Converts any wei value into a WOC value.
  */
 export const fromWei = (wei: BN | string, unit: Units, options: any = DEFAULT_OPTIONS): string => {
   try {
@@ -263,8 +263,8 @@ export class Unit {
   static Ether(str: BN | string) {
     return new Unit(str).asEther();
   }
-  static Woo(str: BN | string) {
-    return new Unit(str).asWoo();
+  static Woc(str: BN | string) {
+    return new Unit(str).asWoc();
   }
   static Kether(str: BN | string) {
     return new Unit(str).asKether();
@@ -324,8 +324,8 @@ export class Unit {
     this.wei = toWei(this.unit, Units.ether);
     return this;
   }
-  asWoo() {
-    this.wei = toWei(this.unit, Units.woo);
+  asWoc() {
+    this.wei = toWei(this.unit, Units.woc);
     return this;
   }
   asKether() {
@@ -395,9 +395,9 @@ export class Unit {
       throw new Error('error transforming');
     }
   }
-  toWoo() {
+  toWoc() {
     if (this.wei) {
-      return fromWei(this.wei, Units.woo);
+      return fromWei(this.wei, Units.woc);
     } else {
       throw new Error('error transforming');
     }

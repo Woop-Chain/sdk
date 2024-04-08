@@ -127,18 +127,18 @@ describe('test validator', () => {
   });
 
   it('test isBech32Address', () => {
-    expect(validators.isBech32Address('woo1au4f9jectk52k24rnk9hjuygt22q2045wcpfdp')).toEqual(true);
+    expect(validators.isBech32Address('woc1au4f9jectk52k24rnk9hjuygt22q2045wcpfdp')).toEqual(true);
     expect(validators.isBech32Address('xxx')).toEqual(false);
   });
   it('test isBech32Address', () => {
     expect(
-      validators.isBech32TestNetAddress('twoo1au4f9jectk52k24rnk9hjuygt22q2045wcpfdp'),
+      validators.isBech32TestNetAddress('twoc1au4f9jectk52k24rnk9hjuygt22q2045wcpfdp'),
     ).toEqual(true);
     expect(validators.isBech32TestNetAddress('xxx')).toEqual(false);
   });
   it('test isValidAddress', () => {
-    expect(validators.isValidAddress('twoo1au4f9jectk52k24rnk9hjuygt22q2045wcpfdp')).toEqual(true);
-    expect(validators.isValidAddress('woo1au4f9jectk52k24rnk9hjuygt22q2045wcpfdp')).toEqual(true);
+    expect(validators.isValidAddress('twoc1au4f9jectk52k24rnk9hjuygt22q2045wcpfdp')).toEqual(true);
+    expect(validators.isValidAddress('woc1au4f9jectk52k24rnk9hjuygt22q2045wcpfdp')).toEqual(true);
     expect(validators.isValidAddress(advanceType.checkSumAddress)).toEqual(true);
     expect(validators.isValidAddress(advanceType.address)).toEqual(true);
     expect(validators.isValidAddress(advanceType.hexAddress)).toEqual(true);

@@ -175,9 +175,9 @@ import {
 import { hexToBN, defineReadOnly } from '@woop-js/utils';
 
 /** @hidden */
-const NegativeWoo: BN = new BN(-1);
+const NegativeWoc: BN = new BN(-1);
 /** @hidden */
-const Woo: BN = new BN(1);
+const Woc: BN = new BN(1);
 /** @hidden */
 const Zero: BN = new BN(0);
 /** @hidden */
@@ -735,7 +735,7 @@ class CoderNumber extends Coder {
         if (v.gt(bounds)) {
           throw new Error('out-of-bounds');
         }
-        bounds = bounds.add(Woo).mul(NegativeWoo);
+        bounds = bounds.add(Woc).mul(NegativeWoc);
         if (v.lt(bounds)) {
           throw new Error('out-of-bounds');
         }

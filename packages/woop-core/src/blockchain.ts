@@ -34,12 +34,12 @@ Create a Woop instance connecting to testnet
 * );
 ```
 
-Getting balance of account `woo103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7`
+Getting balance of account `woc103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7`
 ```javascript
 * wiki.blockchain
-*   .getBalance({ address: 'woo103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7' })
+*   .getBalance({ address: 'woc103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7' })
 *   .then((response) => {
-*     console.log('balance in WOOs: ' + fromWei(hexToNumber(response.result), Units.woo));
+*     console.log('balance in WOCs: ' + fromWei(hexToNumber(response.result), Units.woc));
 *   });
 ```
 
@@ -122,7 +122,7 @@ Getting the transaction count of an account
 ```javascript
 * wiki.blockchain
 *   .getTransactionCount({
-*     address: 'woo1pdv9lrdwl0rg5vglh4xtyrv3wjk3wsqket7zxy',
+*     address: 'woc1pdv9lrdwl0rg5vglh4xtyrv3wjk3wsqket7zxy',
 *   })
 *   .then((response) => {
 *     console.log(hexToNumber(response.result));
@@ -138,13 +138,13 @@ Getting the shard structure and details
 
 Transferring funds using `sendTransaction`
 ```javascript
-// key corresponds to woo103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7, only has testnet balance
+// key corresponds to woc103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7, only has testnet balance
 * wiki.wallet.addByPrivateKey('45e497bd45a9049bcb649016594489ac67b9f052a6cdf5cb74ee2427a60bf25e');
 
 * async function transfer() {
 *   const txn = wiki.transactions.newTx({
-*     to: 'woo166axnkjmghkf3df7xfvd0hn4dft8kemrza4cd2',
-*     value: new Unit(1).asWoo().toWei(),
+*     to: 'woc166axnkjmghkf3df7xfvd0hn4dft8kemrza4cd2',
+*     value: new Unit(1).asWoc().toWei(),
 *     // gas limit, you can use string
 *     gasLimit: '21000',
 *     // send token from shardID
@@ -242,7 +242,7 @@ class Blockchain {
    * @example
    * ```javascript
    * wiki.blockchain.getBalance({
-   *   address: 'woo103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7',
+   *   address: 'woc103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7',
    *   blockNumber: 'latest'
    * }).then(value => {
    *   console.log(value.result);
@@ -804,7 +804,7 @@ class Blockchain {
    * @example
    * ```javascript
    * wiki.blockchain.getStorageAt({
-   *   address: 'woo1d0kw95t6kkljmkk9vu0zv25jraut8ngv5vrs5g',
+   *   address: 'woc1d0kw95t6kkljmkk9vu0zv25jraut8ngv5vrs5g',
    *   position: '0x0'
    * }).then((value) => {
    *   console.log(value);
@@ -848,7 +848,7 @@ class Blockchain {
    * @example
    * ```javascript
    * wiki.blockchain.getTransactionCount({
-   *   address: "woo1d0kw95t6kkljmkk9vu0zv25jraut8ngv5vrs5g"
+   *   address: "woc1d0kw95t6kkljmkk9vu0zv25jraut8ngv5vrs5g"
    * }).then((value) => {
    *   console.log(value.result);
    * });
@@ -913,7 +913,7 @@ class Blockchain {
    * async function transfer() {
    *   const txn = wiki.transactions.newTx({
    *     //  token send to
-   *     to: 'woo166axnkjmghkf3df7xfvd0hn4dft8kemrza4cd2',
+   *     to: 'woc166axnkjmghkf3df7xfvd0hn4dft8kemrza4cd2',
    *     // amount to send
    *     value: '10000',
    *     // gas limit, you can use string
@@ -965,7 +965,7 @@ class Blockchain {
    * async function transfer() {
    *   const txn = wiki.transactions.newTx({
    *     //  token send to
-   *     to: 'woo166axnkjmghkf3df7xfvd0hn4dft8kemrza4cd2',
+   *     to: 'woc166axnkjmghkf3df7xfvd0hn4dft8kemrza4cd2',
    *     // amount to send
    *     value: '10000',
    *     // gas limit, you can use string
@@ -1014,7 +1014,7 @@ class Blockchain {
    * async function transfer() {
    *   const txn = wiki.transactions.newTx({
    *     //  token send to
-   *     to: 'woo166axnkjmghkf3df7xfvd0hn4dft8kemrza4cd2',
+   *     to: 'woc166axnkjmghkf3df7xfvd0hn4dft8kemrza4cd2',
    *     // amount to send
    *     value: '10000',
    *     // gas limit, you can use string
@@ -1114,7 +1114,7 @@ class Blockchain {
    * @example
    * ```javascript
    * wiki.blockchain.estimateGas({
-   *   to: 'woo1d0kw95t6kkljmkk9vu0zv25jraut8ngv5vrs5g',
+   *   to: 'woc1d0kw95t6kkljmkk9vu0zv25jraut8ngv5vrs5g',
    *   data: '0xc6888fa10000000000000000000000000000000000000000000000000000000000000003'
    * }).then((value) => {
    *   console.log(value);

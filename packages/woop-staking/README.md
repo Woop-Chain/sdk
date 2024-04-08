@@ -45,16 +45,16 @@ wiki.stakings.setTxParams({
 Create delegate staking transaction
 ```javascript
 const delegate = wiki.stakings.delegate({
-  delegatorAddress: 'woo103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7',
-  validatorAddress: 'woo1vfqqagdzz352mtvdl69v0hw953hm993n6v26yl',
-  amount: numberToHex(new Unit(1000).asWoo().toWei())
+  delegatorAddress: 'woc103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7',
+  validatorAddress: 'woc1vfqqagdzz352mtvdl69v0hw953hm993n6v26yl',
+  amount: numberToHex(new Unit(1000).asWoc().toWei())
 });
 const delegateStakingTx = delegate.build();
 ```
 
 Sign and send the delegate transaction and receive confirmation
 ```javascript
-// key corresponds to woo103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7, only has testnet balance
+// key corresponds to woc103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7, only has testnet balance
 wiki.wallet.addByPrivateKey('45e497bd45a9049bcb649016594489ac67b9f052a6cdf5cb74ee2427a60bf25e');
 
 wiki.wallet.signStaking(delegateStakingTx).then(signedTxn => {
@@ -71,9 +71,9 @@ Similarily, undelegate and collect reward transactions can be composed, signed a
 Create undelegate staking transaction
 ```javascript
 const undelegate = wiki.stakings.undelegate({
-  delegatorAddress: 'woo103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7',
-  validatorAddress: 'woo1vfqqagdzz352mtvdl69v0hw953hm993n6v26yl',
-  amount: numberToHex(new Unit(1000).asWoo().toWei())
+  delegatorAddress: 'woc103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7',
+  validatorAddress: 'woc1vfqqagdzz352mtvdl69v0hw953hm993n6v26yl',
+  amount: numberToHex(new Unit(1000).asWoc().toWei())
 });
 const undelegateStakingTx = undelegate.build();
 ```
@@ -81,7 +81,7 @@ const undelegateStakingTx = undelegate.build();
 Create collect rewards staking transaction
 ```javascript
 const collectRewards = wiki.stakings.collectRewards({
-  delegatorAddress: 'woo103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7'
+  delegatorAddress: 'woc103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7'
 });
 const collectRewardsStakingTx = collectRewards.build();
 ```

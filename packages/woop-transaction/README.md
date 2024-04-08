@@ -36,8 +36,8 @@ const wiki = new Woop(
 Creating a new transaction using parameters
 ```javascript
 const txn = wiki.transactions.newTx({
-  to: 'woo166axnkjmghkf3df7xfvd0hn4dft8kemrza4cd2',
-  value: new Unit(1).asWoo().toWei(),
+  to: 'woc166axnkjmghkf3df7xfvd0hn4dft8kemrza4cd2',
+  value: new Unit(1).asWoc().toWei(),
   // gas limit, you can use string
   gasLimit: '21000',
   // send token from shardID
@@ -62,7 +62,7 @@ const [encoded, raw] = txn.getRLPUnsigned()
 
 Sign the transaction using a wallet and send the transaction, wait for confirmation and print receipt
 ```javascript
-// key corresponds to woo103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7, only has testnet balance
+// key corresponds to woc103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7, only has testnet balance
 wiki.wallet.addByPrivateKey('45e497bd45a9049bcb649016594489ac67b9f052a6cdf5cb74ee2427a60bf25e');
 
 wiki.wallet.signTransaction(txn).then(signedTxn => {
@@ -126,7 +126,7 @@ async function transfer() {
       console.log('');
       console.log('please see detail in explorer:');
       console.log('');
-      console.log('https://explorer.testnet.wikiwoop.com/#/tx/' + txnHash);
+      console.log('https://testnet.wikiwoop.com/#/tx/' + txnHash);
       console.log('');
       process.exit();
     }
@@ -139,7 +139,7 @@ async function transfer() {
     console.log('');
     console.log('please see detail in explorer:');
     console.log('');
-    console.log('https://explorer.testnet.wikiwoop.com/#/tx/' + txnHash);
+    console.log('https://testnet.wikiwoop.com/#/tx/' + txnHash);
     console.log('');
     process.exit();
   }

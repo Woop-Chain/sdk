@@ -417,7 +417,7 @@ class Account {
    * ```javascript
    * console.log(account.getAddressFromShardID(0));
    *
-   * > woo103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7-0
+   * > woc103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7-0
    * ```
    */
   getAddressFromShardID(shardID: number) {

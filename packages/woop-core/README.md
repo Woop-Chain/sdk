@@ -33,12 +33,12 @@ const wiki = new Woop(
 );
 ```
 
-Getting balance of account `woo103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7`
+Getting balance of account `woc103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7`
 ```javascript
 wiki.blockchain
-  .getBalance({ address: 'woo103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7' })
+  .getBalance({ address: 'woc103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7' })
   .then((response) => {
-    console.log('balance in WOOs: ' + fromWei(hexToNumber(response.result), Units.woo));
+    console.log('balance in WOCs: ' + fromWei(hexToNumber(response.result), Units.woc));
   });
 ```
 
@@ -121,7 +121,7 @@ Getting the transaction count of an account
 ```javascript
 wiki.blockchain
   .getTransactionCount({
-    address: 'woo1pdv9lrdwl0rg5vglh4xtyrv3wjk3wsqket7zxy',
+    address: 'woc1pdv9lrdwl0rg5vglh4xtyrv3wjk3wsqket7zxy',
   })
   .then((response) => {
     console.log(hexToNumber(response.result));
@@ -137,13 +137,13 @@ wiki.blockchain.getShardingStructure().then((response) => {
 
 Transferring funds using `sendTransaction`
 ```javascript
-// key corresponds to woo103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7, only has testnet balance
+// key corresponds to woc103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7, only has testnet balance
 wiki.wallet.addByPrivateKey('45e497bd45a9049bcb649016594489ac67b9f052a6cdf5cb74ee2427a60bf25e');
 
 async function transfer() {
   const txn = wiki.transactions.newTx({
-    to: 'woo166axnkjmghkf3df7xfvd0hn4dft8kemrza4cd2',
-    value: new Unit(1).asWoo().toWei(),
+    to: 'woc166axnkjmghkf3df7xfvd0hn4dft8kemrza4cd2',
+    value: new Unit(1).asWoc().toWei(),
     // gas limit, you can use string
     gasLimit: '21000',
     // send token from shardID

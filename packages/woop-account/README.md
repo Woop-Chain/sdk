@@ -1,6 +1,6 @@
 # @woop-js/account
 
-This package provides a collection of apis to create accounts and wallets and sign using them. A wallet can hold multiple accounts and account is associated with a unique `woo` address. This package also provides facilies to manage account keys.
+This package provides a collection of apis to create accounts and wallets and sign using them. A wallet can hold multiple accounts and account is associated with a unique `woc` address. This package also provides facilies to manage account keys.
 
 ## Installation
 
@@ -10,7 +10,7 @@ npm install @woop-js/account
 
 ## Usage
 
-Creating new account and display hex and bech32 (woo) addresses 
+Creating new account and display hex and bech32 (woc) addresses 
 ```javascript
 const account = new Account(); // or const account = Account.new()
 console.log(account.checksumAddress);
@@ -97,8 +97,8 @@ const { Unit } = require('@woop-js/utils');
 const factory = new TransactionFactory();
 
 const txn = factory.newTx({
-  to: 'woo166axnkjmghkf3df7xfvd0hn4dft8kemrza4cd2',
-  value: new Unit(1).asWoo().toWei(),
+  to: 'woc166axnkjmghkf3df7xfvd0hn4dft8kemrza4cd2',
+  value: new Unit(1).asWoc().toWei(),
   // gas limit, you can use string
   gasLimit: '21000',
   // send token from shardID
@@ -116,7 +116,7 @@ account.signTransaction(txn).then((signedTxn) => {
 
 Similarily staking transactions can be created and signed using account.
 
-A wallet represents user wallet that can hold woo or more user accounts.
+A wallet represents user wallet that can hold woc or more user accounts.
 
 Creating an empty wallet
 ```javascript
@@ -190,8 +190,8 @@ wallet.setSigner(signerAddr);
 Sign transaction using wallet, will sign the transaction using the wallet signer
 ```javascript
 const txn = factory.newTx({
-  to: 'woo166axnkjmghkf3df7xfvd0hn4dft8kemrza4cd2',
-  value: new Unit(1).asWoo().toWei(),
+  to: 'woc166axnkjmghkf3df7xfvd0hn4dft8kemrza4cd2',
+  value: new Unit(1).asWoc().toWei(),
   // gas limit, you can use string
   gasLimit: '21000',
   // send token from shardID
